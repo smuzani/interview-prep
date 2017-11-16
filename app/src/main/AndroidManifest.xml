@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.ArraySplitter"></activity>
+        <activity android:name=".activities.ArraySplitter" />
+        <activity android:name=".activities.ArrayTypes"></activity>
     </application>
 
 </manifest>
