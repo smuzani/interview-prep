@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.syedmuzani.interviewprep.activities.ArraySplitter;
 import com.syedmuzani.interviewprep.activities.ArrayTypes;
+import com.syedmuzani.interviewprep.activities.Primes;
 import com.syedmuzani.interviewprep.adapters.MainPageListAdapter;
 import com.syedmuzani.interviewprep.models.MainMenuLink;
 
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initRecyclerView() {
         links.add(new MainMenuLink("Array Splitter", ArraySplitter.class));
+        links.add(new MainMenuLink("Primes", Primes.class));
         links.add(new MainMenuLink("Arrays", ArrayTypes.class));
     }
 }

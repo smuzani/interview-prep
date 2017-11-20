@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.ArraySplitter" />
-        <activity android:name=".activities.ArrayTypes"></activity>
+        <activity android:name=".activities.ArrayTypes" />
+        <activity android:name=".activities.Primes"></activity>
     </application>
 
 </manifest>
