@@ -18,7 +18,10 @@
         </activity>
         <activity android:name=".activities.ArraySplitter" />
         <activity android:name=".activities.ArrayTypes" />
-        <activity android:name=".activities.Primes"></activity>
+        <activity android:name=".activities.Primes" />
+        <activity android:name=".activities.Advent20151Activity" />
+        <activity android:name=".activities.Advent1Activity" />
+        <activity android:name=".activities.Advent2Activity"></activity>
     </application>
 
 </manifest>
