@@ -8,9 +8,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
-import com.syedmuzani.interviewprep.activities.Advent1Activity;
 import com.syedmuzani.interviewprep.activities.Advent20151Activity;
-import com.syedmuzani.interviewprep.activities.Advent2Activity;
+import com.syedmuzani.interviewprep.activities.Advent20152Activity;
+import com.syedmuzani.interviewprep.activities.Advent20171Activity;
+import com.syedmuzani.interviewprep.activities.Advent20172Activity;
 import com.syedmuzani.interviewprep.activities.ArraySplitter;
 import com.syedmuzani.interviewprep.activities.ArrayTypes;
 import com.syedmuzani.interviewprep.activities.Primes;
@@ -46,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
         links.add(new MainMenuLink("Primes", Primes.class));
         links.add(new MainMenuLink("Arrays", ArrayTypes.class));
         links.add(new MainMenuLink("AoC 2015 Day 1", Advent20151Activity.class));
-        links.add(new MainMenuLink("AoC 2017 Day 1", Advent1Activity.class));
-        links.add(new MainMenuLink("AoC 2017 Day 2", Advent2Activity.class));
+        links.add(new MainMenuLink("AoC 2015 Day 2", Advent20152Activity.class));
+        links.add(new MainMenuLink("AoC 2017 Day 1", Advent20171Activity.class));
+        links.add(new MainMenuLink("AoC 2017 Day 2", Advent20172Activity.class));
     }
 }

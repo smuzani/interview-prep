@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.syedmuzani.interviewprep.R;
 
-public class Advent1Activity extends AppCompatActivity {
+public class Advent20171Activity extends AppCompatActivity {
 
     TextView question;
     TextView answer;

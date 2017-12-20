@@ -20,8 +20,9 @@
         <activity android:name=".activities.ArrayTypes" />
         <activity android:name=".activities.Primes" />
         <activity android:name=".activities.Advent20151Activity" />
-        <activity android:name=".activities.Advent1Activity" />
-        <activity android:name=".activities.Advent2Activity"></activity>
+        <activity android:name=".activities.Advent20152Activity" />
+        <activity android:name=".activities.Advent20171Activity" />
+        <activity android:name=".activities.Advent20172Activity"></activity>
     </application>
 
 </manifest>
