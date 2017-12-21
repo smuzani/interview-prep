@@ -7,6 +7,15 @@ import android.widget.TextView;
 
 import com.syedmuzani.interviewprep.R;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Advent20172Activity extends AppCompatActivity {
 
     TextView question;
@@ -22,37 +31,94 @@ public class Advent20172Activity extends AppCompatActivity {
     }
 
     private void myCode() {
-        String q = "525\t1263\t146\t954\t188\t232\t1019\t918\t268\t172\t1196\t1091\t1128\t234\t650\t420";
-//        String qq = "4011\t4316\t1755\t4992\t228\t240\t3333\t208\t247\t3319\t4555\t717\t1483\t4608\t1387\t3542";
-//        String qqq = "2 4 6 8";
+        String[] fileLines = splitFileToLines(R.raw.advent_2017_2);
+        String q = Arrays.toString(fileLines);
 
-        String[] strArr = q.split("\t");
-        int[] arr = new int[strArr.length];
-        for (int i = 0; i < strArr.length; i++) {
-            arr[i] = Integer.parseInt(strArr[i]);
-        }
-        int high = 0, low = 9;
-        for (int i : arr) {
-            if (high < i) {
-                high = i;
+        /* First star
+
+        int diffTotal = 0;
+        for (String fileLine : fileLines) {
+            String[] nums = fileLine.split("\\s+");
+            int[] ns = strArrayToIntArray(nums);
+            int high = 0, low = 9;
+            for (int n : ns) {
+                if (high < n) {
+                    high = n;
+                }
+
+                if (low > n)
+                    low = n;
+
+                if (high == 9 && low == 0)
+                    break;
+            }
+            int diff = high - low;
+            diffTotal += diff;
+        } */
+
+        int divTotal = 0;
+        for (String fileLine : fileLines) {
+            String[] nums = fileLine.split("\\s+");
+            int[] ns = strArrayToIntArray(nums);
+            int a = 999, b = 998, i = 0;
+            int len = ns.length;
+            for (i = 0; a % b != 0 && i < len; i++) {
+                a = ns[i];
+                for (int j : ns) {
+                    if (j == ns[i]) {
+                        continue;
+                    }
+                    b = j;
+                    if (a % b == 0) {
+                        break;
+                    }
+                }
             }
 
-            if (low > i)
-                low = i;
-
-            if (high == 9 && low == 0)
-                break;
+            int results = a / b;
+            divTotal += results;
         }
 
-        int diff = high - low;
-        Log.v("aaa", "high: " + high + " low: " + low);
-
-        String ans = String.valueOf(diff);
+        String ans = String.valueOf(divTotal);
         display(q, ans);
     }
 
     private void display(String question, String answer) {
         this.question.setText(question);
         this.answer.setText(answer);
+    }
+
+    private String[] splitFileToLines(int rawId) {
+        List<String> ret = new ArrayList<>();
+
+        try {
+            InputStream inputStream = getResources().openRawResource(rawId);
+
+            if (inputStream != null) {
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String receiveString = "";
+
+                while ((receiveString = bufferedReader.readLine()) != null) {
+                    ret.add(receiveString);
+                }
+
+                inputStream.close();
+            }
+        } catch (FileNotFoundException e) {
+            Log.e("readFromFile", "File not found: " + e.toString());
+        } catch (IOException e) {
+            Log.e("readFromFile", "Can not read file: " + e.toString());
+        }
+
+        return ret.toArray(new String[0]);
+    }
+
+    private int[] strArrayToIntArray(String[] numberStrs) {
+        int[] numbers = new int[numberStrs.length];
+        for (int i = 0; i < numberStrs.length; i++) {
+            numbers[i] = Integer.parseInt(numberStrs[i]);
+        }
+        return numbers;
     }
 }
