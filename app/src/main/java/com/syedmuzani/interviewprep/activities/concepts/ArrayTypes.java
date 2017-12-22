@@ -1,4 +1,4 @@
-package com.syedmuzani.interviewprep.activities;
+package com.syedmuzani.interviewprep.activities.concepts;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

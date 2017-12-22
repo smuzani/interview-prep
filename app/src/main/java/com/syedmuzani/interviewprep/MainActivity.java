@@ -8,13 +8,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
-import com.syedmuzani.interviewprep.activities.Advent20151Activity;
-import com.syedmuzani.interviewprep.activities.Advent20152Activity;
-import com.syedmuzani.interviewprep.activities.Advent20171Activity;
-import com.syedmuzani.interviewprep.activities.Advent20172Activity;
-import com.syedmuzani.interviewprep.activities.ArraySplitter;
-import com.syedmuzani.interviewprep.activities.ArrayTypes;
-import com.syedmuzani.interviewprep.activities.Primes;
+import com.syedmuzani.interviewprep.activities.aoc.Advent20151Activity;
+import com.syedmuzani.interviewprep.activities.aoc.Advent20152Activity;
+import com.syedmuzani.interviewprep.activities.aoc.Advent20161Activity;
+import com.syedmuzani.interviewprep.activities.aoc.Advent20171Activity;
+import com.syedmuzani.interviewprep.activities.aoc.Advent20172Activity;
+import com.syedmuzani.interviewprep.activities.concepts.ArraySplitter;
+import com.syedmuzani.interviewprep.activities.concepts.ArrayTypes;
+import com.syedmuzani.interviewprep.activities.concepts.Primes;
 import com.syedmuzani.interviewprep.adapters.MainPageListAdapter;
 import com.syedmuzani.interviewprep.models.MainMenuLink;
 
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         links.add(new MainMenuLink("Arrays", ArrayTypes.class));
         links.add(new MainMenuLink("AoC 2015 Day 1", Advent20151Activity.class));
         links.add(new MainMenuLink("AoC 2015 Day 2", Advent20152Activity.class));
+        links.add(new MainMenuLink("AoC 2016 Day 1", Advent20161Activity.class));
         links.add(new MainMenuLink("AoC 2017 Day 1", Advent20171Activity.class));
         links.add(new MainMenuLink("AoC 2017 Day 2", Advent20172Activity.class));
     }

@@ -16,13 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.ArraySplitter" />
-        <activity android:name=".activities.ArrayTypes" />
-        <activity android:name=".activities.Primes" />
-        <activity android:name=".activities.Advent20151Activity" />
-        <activity android:name=".activities.Advent20152Activity" />
-        <activity android:name=".activities.Advent20171Activity" />
-        <activity android:name=".activities.Advent20172Activity"></activity>
+        <activity android:name=".activities.concepts.ArraySplitter" />
+        <activity android:name=".activities.concepts.ArrayTypes" />
+        <activity android:name=".activities.concepts.Primes" />
+        <activity android:name=".activities.aoc.Advent20151Activity" />
+        <activity android:name=".activities.aoc.Advent20152Activity" />
+        <activity android:name=".activities.aoc.Advent20161Activity" />
+        <activity android:name=".activities.aoc.Advent20171Activity" />
+        <activity android:name=".activities.aoc.Advent20172Activity" />
     </application>
 
 </manifest>
